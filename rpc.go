@@ -6,17 +6,13 @@
 
 package gosane
 
-// primitive types
+import (
+	"net/rpc"
+)
 
-type SANE_Byte uint8
-
-// ordered most significant to least significant (big endian)
-type SANE_Word struct {
-	int32
+type RPCClient struct {
 }
 
-type SANE_String []byte
-
-type SANE_Bool SANE_Word
-
-type SANE_Handle *int32
+type RpcServer struct {
+	rpc.Server
+}
